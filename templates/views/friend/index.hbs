@@ -1,0 +1,48 @@
+{{>header}}
+ <div class="container">
+  <div class="banner">
+    <img src="./../images/js.png" height="100" width="100%" alt="banner" />
+  </div>
+  <div class="content">
+    <h1>{{name}}</h1>
+    <a href="/friend/add">Add Friend</a>
+    <table class="table" border-color="red;">
+        <thead>
+            <th>uuid</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Created On</th>
+            <th>Updated On</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {{#if isRecod}}
+            {{#each datas}}
+            <tr>
+                <td>{{this.uuid}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.mobile}}</td>
+                <td>{{this.address}}</td>
+                <td>{{this.createdon}}</td>
+                <td>{{this.updatedon}}</td>
+                <td>
+                    <a href="/friend/edit/{{this.uuid}}">Edit</a>
+                    <a href="/friend/delete?uuid={{this.uuid}}">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+            {{else}}
+             <tr>
+                <td colspan="5">
+                    Record not found
+                </td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+  </div>
+</div>
+{{>footer}}

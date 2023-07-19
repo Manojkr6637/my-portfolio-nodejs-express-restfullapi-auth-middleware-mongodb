@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(164, 171, 171);
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+}
+
+.banner {
+    height: 100px;
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    float: right;
+}
+
+.menu .menu-li {
+    float: left;
+    padding: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

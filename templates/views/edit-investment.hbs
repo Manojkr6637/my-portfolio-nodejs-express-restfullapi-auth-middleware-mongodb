@@ -1,0 +1,24 @@
+{{>header}}
+<div class="container">
+    <div class="banner">
+           <img src="./../images/js.png" height="100" width="100%" alt="banner" />
+    </div>
+    <div class="content">
+            <h1>{{name}}</h1>
+            <form  action="/edit/{{uuid}}">
+            <div>
+               <label for="">Title</label>
+               <input type="text" name="title" placeholder="Enter title" value="{{title}}">
+            </div>
+             <div>
+               <label for="">Description</label>
+               <input type="text" name="description" placeholder="Enter Description" value="{{description}}">
+             </div>
+             <div> 
+               <input type="submit" name="submit" value="Submit" />
+             </div>
+            </form>
+            <p> This is about home page.</p>
+    </div>
+</div>
+{{>footer}}
