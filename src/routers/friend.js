@@ -2,7 +2,7 @@ const express = require('express');
 const router = new express.Router();
 // const uuid = require('uuid'); 
 // const friend = require('./../models/Friend');
-const Friend = require('./../models/friend')
+const Friend = require('../models/friend')
 let datas = [];
 router.get('/friend', async function(req, res) {
     // datas = await find();
