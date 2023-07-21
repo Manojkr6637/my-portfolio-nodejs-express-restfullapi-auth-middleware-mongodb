@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const Schema = mongoose.Schema;
-mongoose.connect('mongodb://127.0.0.1:27017/my-portfolio-db')
+mongoose.connect(process.env.MONGODB_URL)
     .then(() => console.log('Connected!'));
 const modelName = new Schema({
     name: {
